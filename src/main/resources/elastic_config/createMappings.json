@@ -1,0 +1,12 @@
+{
+  "properties": {
+    "embedding": {
+      "type": "dense_vector",
+      "dims": 5
+    },
+    "shopId": {
+      "type": "text"
+    }
+  }
+
+}

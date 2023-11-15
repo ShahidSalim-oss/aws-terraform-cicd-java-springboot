@@ -1,0 +1,30 @@
+{
+  "query": {
+    "function_score": {
+      "functions": [
+        {
+          "script_score": {
+            "script": {
+              "inline": "cosineSimilarity(params.queryVector, doc['embedding']) + 1.0",
+              "lang": "painless",
+              "params": {
+                "queryVector": [
+                  854.0533478069765,
+                  114.8905872114014,
+                  710.8688634159045,
+                  884.19250508333,
+                  233.93023933916442
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "query": {
+        "match": {
+          "_id": "UgGH1IsBNpr6L_fzawYS"
+        }
+      }
+    }
+  }
+}
